@@ -1,0 +1,333 @@
+/* Importación de la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
+/* Estilos generales para todo el documento */
+body, html {
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+    box-sizing: border-box; /* Incluir el borde en el cálculo de tamaño del elemento */
+    font-family: 'sans-serif', Arial, Helvetica, sans-serif; /* Fuente por defecto */
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+}
+
+/* Comportamiento de desplazamiento suave para todas las secciones */
+html {
+    scroll-behavior: smooth;
+}
+
+/* SECCIÓN INICIO */
+#Inicio {
+    background: 
+        linear-gradient(rgba(19, 17, 17, 0.7), rgba(0, 0, 0, 0.7)), /* Gradiente para fondo oscuro */
+        url('images/Ing\ sistemas.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center center; /* Centra la imagen en la pantalla */
+    min-height: 100vh; /* Altura mínima del 100% de la vista */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    color: white; /* Color de texto blanco */
+    position: relative; /* Posicionamiento relativo para el fondo */
+    margin-top: 0; /* Eliminar margen superior */
+}
+
+/* Encabezado fijo en la parte superior */
+#Inicio .Contenido header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    position: fixed; /* Fija el encabezado en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 0; /* Ubica en la parte superior */
+    left: 0; /* Ubica al inicio de la pantalla */
+    z-index: 100; /* Asegura que se quede por encima de otros elementos */
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 5px 20px; /* Espaciado dentro del encabezado */
+    box-sizing: border-box; /* Incluye el relleno en el cálculo del tamaño */
+}
+
+/* Estilo del logo */
+#Inicio .Contenido header .logo a {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    color: white; /* Color del texto blanco */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilos para la navegación */
+#Inicio .Contenido header #nav ul {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    list-style: none; /* Elimina los puntos de lista */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin: 0; /* Eliminar márgenes */
+}
+
+/* Estilo de los enlaces en la navegación */
+#Inicio .Contenido header #nav ul li a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: white; /* Color de texto blanco */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto hover sobre los enlaces */
+#Inicio .Contenido header #nav ul li a:hover {
+    color: #f0a500; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilo para los íconos de redes sociales */
+#Inicio .Contenido header .redes {
+    display: flex; /* Flexbox para alinear los íconos */
+    align-items: center; /* Centrar verticalmente */
+    gap: 15px; /* Espaciado entre los íconos */
+}
+
+/* Estilo de los íconos de redes sociales */
+#Inicio .Contenido header .redes a {
+    color: white; /* Color de los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto hover en los íconos de redes sociales */
+#Inicio .Contenido header .redes a:hover {
+    color: #f0a500; /* Cambia el color al pasar el mouse */
+}
+
+/* Menú de navegación en pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    #Inicio .Contenido header .redes {
+        display: flex;
+        justify-content: center; /* Centra los íconos */
+        gap: 10px; /* Espaciado entre íconos */
+    }
+    .nav-responsive {
+        display: block; /* Muestra el ícono de menú en pantallas pequeñas */
+        font-size: 2rem; /* Tamaño más grande */
+        cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+    }
+}
+
+/* SECCIÓN DE PRESENTACIÓN EN LA PÁGINA DE INICIO */
+#Inicio .Contenido .presentacion {
+    text-align: center; /* Centra el texto */
+    max-height: 100vh; /* Máxima altura de la pantalla */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    margin-top: 0; /* Eliminar margen superior */
+}
+
+/* Estilo del texto "Bienvenidos" */
+#Inicio .Contenido .presentacion .Bienvenidos {
+    font-size: 2.5rem; /* Tamaño grande */
+    margin-bottom: 10px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+    color: #f8f556f3; /* Color amarillo brillante */
+    text-align: center; /* Alinear el texto al centro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave al texto */
+}
+
+/* Estilo del texto de la presentación */
+#Inicio .Contenido .presentacion h2 span {
+    color: #f0a500; /* Color para resaltar ciertas palabras */
+}
+
+/* Estilo del botón en la presentación */
+#Inicio .Contenido .presentacion .btn-portafolio {
+    display: inline-block; /* Muestra el botón en línea */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #f1c25c; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px; /* Margen superior */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto hover en el botón */
+#Inicio .Contenido .presentacion .btn-portafolio:hover {
+    background-color: white; /* Cambia el fondo al pasar el mouse */
+    color: #f0a500; /* Cambia el color del texto */
+}
+
+/* Estilos para la sección "Sobre mí" */
+#sobre-mi {
+    text-align: center; /* Centra el texto */
+    margin-top: 100px; /* Margen superior para separar de la sección anterior */
+}
+
+/* Estilo de la imagen de perfil */
+#sobre-mi .contenedor-foto img {
+    width: 200px; /* Tamaño ajustable de la imagen */
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Imagen circular */
+    margin: 20px auto; /* Espaciado automático */
+}
+
+/* Estilos para los botones de contacto */
+.btn-contacto {
+    display: inline-block; /* Muestra el botón en línea */
+    padding: 15px 30px; /* Espaciado dentro del botón */
+    background: linear-gradient(45deg, #f0a500, #d35400); /* Gradiente de color de fondo */
+    color: rgb(252, 250, 250); /* Color del texto */
+    font-weight: bold; /* Negrita */
+    border: none; /* Elimina el borde */
+    border-radius: 25px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina subrayado */
+    transition: transform 0.3s ease; /* Efecto de transformación al pasar el mouse */
+}
+
+/* Efecto hover en el botón de contacto */
+.btn-contacto:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el mouse */
+}
+
+/* Estilo de los iconos en la sección de habilidades */
+#skills i {
+    color: #f0a500; /* Color para los íconos */
+    transition: transform 0.3s; /* Transición para el efecto de escalado */
+}
+
+/* Efecto hover en los iconos de habilidades */
+#skills i:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el mouse */
+    color: white; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos de los botones de portafolio */
+.btn-portafolio {
+    background: linear-gradient(45deg, #f0a500, #d35400); /* Gradiente de color */
+    color: rgb(252, 252, 252); /* Color del texto */
+    font-weight: bold; /* Negrita */
+    border: none; /* Eliminar borde */
+    border-radius: 25px; /* Bordes redondeados */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: transform 0.3s ease; /* Efecto de transformación */
+}
+
+/* Efecto hover en el botón de portafolio */
+.btn-portafolio:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+}
+
+/* SECCIÓN PORTAFOLIO */
+#portafolio {
+    background: #f8f556f3; /* Fondo amarillo brillante */
+    padding: 50px 0; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 0; /* Eliminar margen superior */
+    margin-bottom: 50px; /* Margen inferior */
+}
+
+/* Estilos para las tarjetas del portafolio */
+#portafolio .card {
+    background-color: #f0a500; /* Fondo amarillo brillante */
+    border: none; /* Eliminar borde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos */
+}
+
+/* Efecto hover en las tarjetas del portafolio */
+#portafolio .card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+}
+
+/* Color del título en la tarjeta */
+#portafolio .card-title {
+    color: white; /* Color blanco */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo del texto dentro de las tarjetas */
+#portafolio .card-text {
+    color: #f1f1f1; /* Color gris claro */
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+#portafolio .card-img-top {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantiene la proporción */
+    border-bottom: 2px solid #fff; /* Borde blanco debajo de la imagen */
+}
+
+/* Estilos para el contenedor de las tarjetas */
+#portafolio .row {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centra las tarjetas */
+    gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+/* Ajuste para la disposición en rejilla de las tarjetas */
+#portafolio .contenedor-portafolio {
+    display: grid; /* Usa grid para disposición */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajuste automático de columnas */
+    grid-gap: 30px; /* Espaciado entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas */
+    padding: 0 20px; /* Espaciado interno */
+    margin-top: 50px; /* Margen superior */
+    margin-bottom: 50px; /* Margen inferior */
+}
+
+/* SECCIÓN TESTIMONIOS */
+#testimonios {
+    background-color: #f0efabf3; /* Fondo suave para la sección */
+    padding: 50px 0; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente específica */
+}
+
+/* Estilo de las tarjetas de testimonios */
+#testimonios .card {
+    border: none; /* Eliminar borde */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra de las tarjetas */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente */
+}
+
+/* Estilo del texto en las tarjetas de testimonios */
+#testimonios .card-text {
+    background-color: #f0a500; /* Fondo naranja brillante */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px; /* Relleno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente */
+    font-size: 18px; /* Tamaño de texto */
+}
+
+/* SECCIÓN CONTACTO */
+#contacto {
+    background-color: #333; /* Fondo oscuro */
+    padding: 50px 0; /* Espaciado interno */
+    color: white; /* Color blanco para el texto */
+}
+
+/* Estilo de los campos de formulario */
+#contacto .form-control {
+    background-color: #555; /* Fondo gris oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Eliminar borde */
+}
+
+/* Estilo cuando el campo de formulario está enfocado */
+#contacto .form-control:focus {
+    background-color: #444; /* Fondo gris oscuro */
+    border-color: #f0a500; /* Borde amarillo */
+}
+
+/* Estilo del botón de envío */
+#contacto button {
+    background-color: #f0a500; /* Fondo amarillo */
+    color: white; /* Texto blanco */
+    border: none; /* Eliminar borde */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+/* Efecto hover en el botón de contacto */
+#contacto button:hover {
+    background-color: #d35400; /* Cambio de color al pasar el ratón */
+}
